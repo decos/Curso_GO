@@ -26,4 +26,11 @@ func main() {
 	fmt.Println("Hola Mundo desde GO con " + nombre + apellidos + pais)
 	fmt.Println(suma)
 	fmt.Println(resta)
+
+	numero1 := 10.
+	numero2 := 6.
+
+	//Division
+	fmt.Print("La division es: ")
+	fmt.Println(numero1 / numero2)
 }

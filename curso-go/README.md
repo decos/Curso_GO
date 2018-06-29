@@ -58,5 +58,13 @@ De esta manera GO va inferir que tipo de variable tengo
 
 Para definir una constante usamos la palabra reservada **const**
 
+## Operadores Aritmeticos
+
+Suma (+)
+Resta (-)
+Multiplicacion (*)
+Division (/)
+Resto (%)
+
 
 
