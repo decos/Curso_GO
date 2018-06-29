@@ -54,6 +54,9 @@ Tambien se pueden crear variables de otra manera **:=**
 
 De esta manera GO va inferir que tipo de variable tengo
 
-## Tipos de Datos
+## Constantes
+
+Para definir una constante usamos la palabra reservada **const**
+
 
 
