@@ -66,5 +66,9 @@ Multiplicacion (*)
 Division (/)
 Resto (%)
 
+## Tipos personalizados. Structs
+
+Para crear un tipo de dato personalizado usar la palabra reservada **type**
+
 
 
