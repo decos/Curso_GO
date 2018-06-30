@@ -65,6 +65,23 @@ func main() {
 
 	// Retorno de datos
 	fmt.Println(devolverTexto())
+
+	//Closures
+	fmt.Print("Pedido 1 --->")
+	fmt.Println(gorras(45, "EUR"))
+
+	fmt.Println("--------------")
+
+	fmt.Print("Pedido 2 --->")
+	fmt.Println(gorras(20, "USD"))
+}
+
+func gorras(pedido float32, moneda string) (string, float32, string) {
+	precio := func() float32 {
+		return pedido * 7
+	}
+
+	return "El precio del pedido es:", precio(), moneda
 }
 
 func devolverTexto() (dato1 string, dato2 int) {

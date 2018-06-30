@@ -81,3 +81,9 @@ Para definir una funcion tenemos la palabra reservada **func**
 
 Se puede devolver mas de un dato
 
+## Closures
+
+Definir dentro de una funcion una variable en la cual dentro haya una funcion anonima y al final sea una pequenia funcion
+
+
+
