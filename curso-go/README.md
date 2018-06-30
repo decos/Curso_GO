@@ -77,5 +77,7 @@ Funciones
 
 Para definir una funcion tenemos la palabra reservada **func**
 
+## Retorno de datos
 
+Se puede devolver mas de un dato
 

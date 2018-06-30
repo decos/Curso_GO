@@ -62,6 +62,16 @@ func main() {
 	//fmt.Println(gorraNegra)
 	fmt.Println(gorraNegra.marca)
 	holaMundo()
+
+	// Retorno de datos
+	fmt.Println(devolverTexto())
+}
+
+func devolverTexto() (dato1 string, dato2 int) {
+	dato1 = "Diego"
+	dato2 = 27
+
+	return
 }
 
 func holaMundo() {
