@@ -35,12 +35,18 @@ func main() {
 	fmt.Println(suma)
 	fmt.Println(resta)
 
-	numero1 := 10.
-	numero2 := 6.
+	var numero1 float32 = 10
+	var numero2 float32 = 6
 
-	//Division
-	fmt.Print("La division es: ")
-	fmt.Println(numero1 / numero2)
+	fmt.Println("Calculadora 1")
+	calculadora(numero1, numero2)
+	fmt.Println("-------------")
+
+	var numero3 float32 = 44
+	var numero4 float32 = 7
+
+	fmt.Println("Calculadora 2")
+	calculadora(numero3, numero4)
 
 	// Importar tipo de dato personalizado
 	/*
@@ -55,4 +61,48 @@ func main() {
 
 	//fmt.Println(gorraNegra)
 	fmt.Println(gorraNegra.marca)
+	holaMundo()
+}
+
+func holaMundo() {
+	fmt.Println("Hola mundo!")
+}
+
+func operacion(n1 float32, n2 float32, op string) float32 {
+	var resultado float32
+	if op == "+" {
+		resultado = n1 + n2
+	}
+
+	if op == "-" {
+		resultado = n1 - n2
+	}
+
+	if op == "/" {
+		resultado = n1 / n2
+	}
+
+	if op == "*" {
+		resultado = n1 * n2
+	}
+
+	return resultado
+}
+
+func calculadora(numero1 float32, numero2 float32) {
+	//Suma
+	fmt.Print("La suma es: ")
+	fmt.Println(operacion(numero1, numero2, "+"))
+
+	//Resta
+	fmt.Print("La resta es: ")
+	fmt.Println(operacion(numero1, numero2, "-"))
+
+	//Multiplicacion
+	fmt.Print("La multiplicacion es: ")
+	fmt.Println(operacion(numero1, numero2, "*"))
+
+	//Division
+	fmt.Print("La division es: ")
+	fmt.Println(operacion(numero1, numero2, "/"))
 }

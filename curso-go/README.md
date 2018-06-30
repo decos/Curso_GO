@@ -70,5 +70,12 @@ Resto (%)
 
 Para crear un tipo de dato personalizado usar la palabra reservada **type**
 
+Funciones
+===
+
+## Crear funciones
+
+Para definir una funcion tenemos la palabra reservada **func**
+
 
 
