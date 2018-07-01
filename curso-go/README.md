@@ -89,5 +89,22 @@ Definir dentro de una funcion una variable en la cual dentro haya una funcion an
 
 La funcion puede recibir uno, ninguno o muchos parametros utilizando el operador **...**
 
-**_** : Se llama el **identificador en blanco**. Evita tener que declarar todas las variables para los valores de devoluciones.
+**_** : Se llama el **identificador en blanco**. Evita tener que declarar todas las variables para los valores devueltos.
+
+Arrays y Slices
+===
+
+## Arrays
+
+Se pueden definir de dos formas:
+
+    $ peliculas := [3]string{
+        "La verdad Duele", 
+        "Ciudadano Ejemplar", 
+        "Batman"}
+
+    $ var peliculas [3]string
+    peliculas[0] = "La verdad duele"
+	peliculas[1] = "Ciudadano ejemplar"
+	peliculas[2] = "Gran Torino"
 

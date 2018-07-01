@@ -77,6 +77,20 @@ func main() {
 
 	// Parametros
 	pantalon("rojo", "largo", "sin bolsillos", "nike")
+
+	// Arrays
+	/*
+		var peliculas [3]string
+		peliculas[0] = "La verdad duele"
+		peliculas[1] = "Ciudadano ejemplar"
+		peliculas[2] = "Gran Torino"
+	*/
+	peliculas := [3]string{
+		"La verdad Duele",
+		"Ciudadano Ejemplar",
+		"Batman"}
+
+	fmt.Println(peliculas)
 }
 
 func pantalon(caracteristicas ...string) {
