@@ -85,5 +85,9 @@ Se puede devolver mas de un dato
 
 Definir dentro de una funcion una variable en la cual dentro haya una funcion anonima y al final sea una pequenia funcion
 
+## Parametros
 
+La funcion puede recibir uno, ninguno o muchos parametros utilizando el operador **...**
+
+**_** : Se llama el **identificador en blanco**. Evita tener que declarar todas las variables para los valores de devoluciones.
 

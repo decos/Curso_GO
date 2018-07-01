@@ -74,6 +74,15 @@ func main() {
 
 	fmt.Print("Pedido 2 --->")
 	fmt.Println(gorras(20, "USD"))
+
+	// Parametros
+	pantalon("rojo", "largo", "sin bolsillos", "nike")
+}
+
+func pantalon(caracteristicas ...string) {
+	for _, caracteristica := range caracteristicas {
+		fmt.Println(caracteristica)
+	}
 }
 
 func gorras(pedido float32, moneda string) (string, float32, string) {
