@@ -85,10 +85,24 @@ func main() {
 		peliculas[1] = "Ciudadano ejemplar"
 		peliculas[2] = "Gran Torino"
 	*/
-	peliculas := [3]string{
-		"La verdad Duele",
-		"Ciudadano Ejemplar",
-		"Batman"}
+	/*
+		peliculas := [3]string{
+			"La verdad Duele",
+			"Ciudadano Ejemplar",
+			"Batman"}
+	*/
+
+	//Array Multidimensional
+
+	var peliculas [3][2]string
+	peliculas[0][0] = "La verdad duele"
+	peliculas[0][1] = "Ciudadano ejemplar"
+
+	peliculas[1][0] = "Gran Torino"
+	peliculas[1][1] = "El Senior de los Anillos"
+
+	peliculas[2][0] = "Harry Potter"
+	peliculas[2][1] = "Mientras duermes"
 
 	fmt.Println(peliculas)
 }

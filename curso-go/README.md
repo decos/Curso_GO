@@ -108,3 +108,9 @@ Se pueden definir de dos formas:
 	peliculas[1] = "Ciudadano ejemplar"
 	peliculas[2] = "Gran Torino"
 
+## Arrays Multidimensionales
+
+Se puede definir de la siguiente manera
+
+    $ var peliculas [3][2]string
+
