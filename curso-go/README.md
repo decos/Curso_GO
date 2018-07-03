@@ -129,3 +129,13 @@ No se necesita definir el numero fijo de elementos
 Anadir un elemento al slice
 
     $ peliculas = append(peliculas, "Snowden")
+
+## Slices y funciones utiles
+
+**len** : Cuantos elementos tengo en el slice
+
+**append** : Anadir un elemento al slice
+
+Imprimir los elementos del 0 al 3
+
+    $ fmt.Println(peliculas[0:3])

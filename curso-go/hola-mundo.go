@@ -115,7 +115,7 @@ func main() {
 
 	peliculas = append(peliculas, "Snowden")
 
-	fmt.Println(peliculas)
+	fmt.Println(peliculas[0:3])
 }
 
 func pantalon(caracteristicas ...string) {
