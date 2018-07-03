@@ -114,3 +114,18 @@ Se puede definir de la siguiente manera
 
     $ var peliculas [3][2]string
 
+## Slices
+
+Un slice es un arreglo que no tiene un numero de indice marcado
+
+No se necesita definir el numero fijo de elementos
+
+    $ peliculas := []string{
+		"La verdad Duele",
+		"Ciudadano Ejemplar",
+		"Batman",
+		"Superman"}
+
+Anadir un elemento al slice
+
+    $ peliculas = append(peliculas, "Snowden")

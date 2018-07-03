@@ -93,16 +93,27 @@ func main() {
 	*/
 
 	//Array Multidimensional
+	/*
+		var peliculas [3][2]string
+		peliculas[0][0] = "La verdad duele"
+		peliculas[0][1] = "Ciudadano ejemplar"
 
-	var peliculas [3][2]string
-	peliculas[0][0] = "La verdad duele"
-	peliculas[0][1] = "Ciudadano ejemplar"
+		peliculas[1][0] = "Gran Torino"
+		peliculas[1][1] = "El Senior de los Anillos"
 
-	peliculas[1][0] = "Gran Torino"
-	peliculas[1][1] = "El Senior de los Anillos"
+		peliculas[2][0] = "Harry Potter"
+		peliculas[2][1] = "Mientras duermes"
+	*/
 
-	peliculas[2][0] = "Harry Potter"
-	peliculas[2][1] = "Mientras duermes"
+	//Slices
+
+	peliculas := []string{
+		"La verdad Duele",
+		"Ciudadano Ejemplar",
+		"Batman",
+		"Superman"}
+
+	peliculas = append(peliculas, "Snowden")
 
 	fmt.Println(peliculas)
 }
