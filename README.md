@@ -42,11 +42,18 @@ Ejecutar los siguientes comandos
 		
 	$ sudo gedit $HOME/.profile
 
-Cerrar sesion e Iniciar Sesion
+Añadir al final del documento lo siguiente
+
+	$ export PATH=$PATH:/usr/local/go/bin
+
+Guardar los cambios, cerrar y ejecutar para refrescar el perfil que se esta ejecutando
+
+	$ source ~/.profile
+
 	
 Crear el siguiente directorio dentro de $HOME
 		
-	Documentos/GO/Prueba00/src/hello
+	Documentos/GO/prueba-00
 
 Crear un fichero llamado hello.go
 
