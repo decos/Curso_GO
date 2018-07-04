@@ -49,7 +49,6 @@ Añadir al final del documento lo siguiente
 Guardar los cambios, cerrar y ejecutar para refrescar el perfil que se esta ejecutando
 
 	$ source ~/.profile
-
 	
 Crear el siguiente directorio dentro de $HOME
 		
