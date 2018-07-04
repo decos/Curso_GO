@@ -40,15 +40,11 @@ Ejecutar los siguientes comandos
 		
 	$ tar -C /usr/local -xzf go1.10.3.linux-amd64.tar.gz
 		
-	$ sudo gedit $HOME/.profile
-
-Añadir al final del documento lo siguiente
-
 	$ export PATH=$PATH:/usr/local/go/bin
 
-Guardar los cambios, cerrar y ejecutar para refrescar el perfil que se esta ejecutando
+Ejecutar para refrescar el perfil que se esta ejecutando
 
-	$ source ~/.profile
+	$ source $HOME/.profile
 	
 Crear el siguiente directorio dentro de $HOME
 		

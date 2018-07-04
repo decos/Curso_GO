@@ -16,3 +16,8 @@ Para recibir valores desde la consola debemos usar la libreria **os**
 Para convertir un string a entero debemos usar la libreria **strconv**
 
     $ edad, _ := strconv.Atoi(os.Args[2])
+
+## Bucle for
+
+Iteradores o bucles, ejecutar un bloque de codigo tantas veces lo necesitemos
+
