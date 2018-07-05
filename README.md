@@ -41,6 +41,8 @@ Ejecutar los siguientes comandos
 	$ tar -C /usr/local -xzf go1.10.3.linux-amd64.tar.gz
 		
 	$ export PATH=$PATH:/usr/local/go/bin
+	$ export GOROOT=$HOME/go
+	$ export GOBIN="$GOPATH/bin"
 
 Ejecutar para refrescar el perfil que se esta ejecutando
 
