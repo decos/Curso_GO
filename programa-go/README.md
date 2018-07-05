@@ -19,5 +19,6 @@ Para convertir un string a entero debemos usar la libreria **strconv**
 
 ## Bucle for
 
-Iteradores o bucles, ejecutar un bloque de codigo tantas veces lo necesitemos
+Iteradores o bucles, ejecutar un bloque de codigo tantas veces lo necesitemos.
 
+    $ for i := 0; i < 15; i++ {}
