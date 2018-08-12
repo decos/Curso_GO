@@ -1,7 +1,4 @@
-LEGUAJES DE PROGRAMACION:
-
-1. GO 
-2. PHP 
-3. JAVASCRIPT 
-4. JAVA
-5. C#
+Angular
+Java
+C++
+C#
