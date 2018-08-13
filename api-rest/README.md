@@ -53,3 +53,6 @@ Servidor web y API RESTful con Golang y MongoDB
             Director string `json:"director"`
         }
 
+## Arquitectura
+
+- La API ya esta optimizada, mejor encapsulada y abstraida
