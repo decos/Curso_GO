@@ -78,4 +78,35 @@ Servidor web y API RESTful con Golang y MongoDB
             "director": "J.K. Rowling"
         }
 
-        
+## Instalar MongoDB
+
+1. Descargar MongoDB de la pagina web
+            
+        https://www.mongodb.com/download-center?jmp=nav#community
+
+2. Importar la llave publica de MongoDB
+    
+        sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4
+
+3. Actualizar la base de datos del administrador de paquetes
+
+        sudo apt-get update
+
+4. Instalar los paquetes de MongoDB
+
+        sudo apt-get install -y mongodb-org
+
+5. Habilitar el servicio de MongoDB
+
+        sudo systemctl enable mongod
+
+6. Para conectarse a MongoDB 
+
+        mongo
+
+7. Verificar el funcionamiento
+
+        > use mydb;
+        > db.test.save( { tecadmin: 100 } )
+        > db.test.find()
+            { "_id" : ObjectId("52b0dc8285f8a8071cbb5daf"), "tecadmin" : 100 }
