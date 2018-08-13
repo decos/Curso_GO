@@ -41,5 +41,15 @@ Servidor web y API RESTful con Golang y MongoDB
 
 - Importar la libreria *encoding/json* que nos permitira devolver la respuesta en un formato JSON
 
+## Modelos y JSON
 
+- Por buenas practicas los nombre por defecto a la hora de devolver el JSON deben ser en minuscula
+
+- Para evitar modificar el Struct, generamos un alias
+
+        type Movie struct {
+            Name     string `json:"name"`
+            Year     int    `json:"year"`
+            Director string `json:"director"`
+        }
 
