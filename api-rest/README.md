@@ -32,3 +32,14 @@ Servidor web y API RESTful con Golang y MongoDB
         $ params := mux.Vars(r)
         $ movie_id := params["id"]
         $ fmt.Fprintf(w, "Has cargado la pelicula numero %s", movie_id)
+
+## Modelos
+
+- El modelo va ser una pequeña clase, dentro de GO llamado *struct*
+
+- Todo lo que este dentro del paquete *main* estara disponible desde cualquier otro fichero
+
+- Importar la libreria *encoding/json* que nos permitira devolver la respuesta en un formato JSON
+
+
+
