@@ -20,3 +20,15 @@ Servidor web y API RESTful con Golang y MongoDB
         $ router := mux.NewRouter().StrictSlash(true)
         $ router.HandleFunc("/", Index)
         $ router.HandleFunc("/contacto", Contact)
+
+## Parametros URL
+
+- Configuracion de la ruta
+
+        $ router.HandleFunc("/pelicula/{id}", MovieShow)
+
+- Recoger parametros por la URL
+
+        $ params := mux.Vars(r)
+        $ movie_id := params["id"]
+        $ fmt.Fprintf(w, "Has cargado la pelicula numero %s", movie_id)
