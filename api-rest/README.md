@@ -56,3 +56,26 @@ Servidor web y API RESTful con Golang y MongoDB
 ## Arquitectura
 
 - La API ya esta optimizada, mejor encapsulada y abstraida
+
+## Metodo POST para crear elementos
+
+1. Definir el la ruta *MovieAdd*
+
+2. Definir la accion *MovieAdd*
+
+3. Definir la variable global *movies*
+
+5. Utilizar POSTMAN para agregar una pelicular a la aplicación
+
+        URL: http://localhost:8080/pelicula
+        
+        Headers: Content-Type:application/json
+
+        Body (raw)
+        {
+            "name": "El Señor de los Anillos",
+            "year": 2015,
+            "director": "J.K. Rowling"
+        }
+
+        
