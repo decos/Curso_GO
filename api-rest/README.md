@@ -164,3 +164,14 @@ Para hacer la conexión utilizaremos la librería **mgo** (pronunciado como *man
         $       return session
         $ }
 
+## Guardar en la base de datos
+
+1. Crear la variable global **collection**
+
+        $ var collection = getSession().DB("curso_go").C("movies")
+
+2. Modificar la accion **MovieAdd** para que almacene en la base de datos **curso_go**
+
+3. Hacer un POST usando *Postman*
+
+- La base de datos no necesita ser creada, al hacer el POST la crea automaticamente y se crea la coleccion **movies**
