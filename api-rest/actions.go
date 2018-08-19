@@ -6,6 +6,8 @@ import (
 	"log"
 	"net/http"
 
+	"gopkg.in/mgo.v2"
+
 	"github.com/gorilla/mux"
 )
 
@@ -13,6 +15,16 @@ var movies = Movies{
 	Movie{"Sin Limites", 2013, "Desconocido"},
 	Movie{"Batman Begins", 1999, "Scorsese"},
 	Movie{"A todo gas", 2005, "Pizzi"},
+}
+
+func getSession() *mgo.Session {
+	session, err := mgo.Dial("mongodb://localhost")
+
+	if err != nil {
+		panic(err)
+	}
+
+	return session
 }
 
 func Index(w http.ResponseWriter, r *http.Request) {

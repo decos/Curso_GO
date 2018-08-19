@@ -137,3 +137,30 @@ Para instalar Robo3t en Ubuntu, realizar las siguientes acciones:
         $ ./robo3t
 
 5. Crear la conexión local a mongodb
+
+## Conexión a MongoDB desde GO
+
+Para hacer la conexión utilizaremos la librería **mgo** (pronunciado como *mango*)
+
+1. Ingresar a la siguiente URL
+
+        https://labix.org/mgo
+
+2. Ir al proyecto en GO y ejecutar el siguiente comando para instalar la libreria
+
+        $ go get gopkg.in/mgo.v2
+
+3. Además instalar la librería que nos permitira trabajar con los JSON y documentos binarios (**bson**) 
+
+        $ go get gopkg.in/mgo.v2/bson
+
+4. Crear la conexión a MongoDB en el proyecto (*actions.go*)
+
+        $ func getSession() *mgo.Session {
+        $       session, err := mgo.Dial("mongodb://localhost")
+        $       if err != nil {
+        $               panic(err)        
+        $       }
+        $       return session
+        $ }
+
