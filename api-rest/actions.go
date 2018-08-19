@@ -81,8 +81,7 @@ func MovieAdd(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	json.NewEncoder(w).Encode(movie_data)
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(200)
-
+	json.NewEncoder(w).Encode(movie_data)
 }
