@@ -99,6 +99,9 @@ Servidor web y API RESTful con Golang y MongoDB
 5. Habilitar el servicio de MongoDB
 
         sudo systemctl enable mongod
+        
+        sudo service mongod stop
+        sudo service mongod start
 
 6. Para conectarse a MongoDB 
 
@@ -110,3 +113,27 @@ Servidor web y API RESTful con Golang y MongoDB
         > db.test.save( { tecadmin: 100 } )
         > db.test.find()
             { "_id" : ObjectId("52b0dc8285f8a8071cbb5daf"), "tecadmin" : 100 }
+
+## Mongo GUI (Robo3t)
+
+Para instalar Robo3t en Ubuntu, realizar las siguientes acciones:
+
+1. Descargar Robo3t de la siguiente página
+
+        https://robomongo.org/
+
+2. Ejecutar los siguientes comandos
+
+        $ tar -xvzf robo3t-1.2.1-linux-x86_64-3e50a65.tar.gz
+        $ sudo mkdir /usr/local/bin/robo3t
+        $ mv robo3t-1.2.1-linux-x86_64-3e50a65/* /usr/local/bin/robo3t
+        $ cd /usr/local/bin/robo3t/bin
+        $ chmod +x robo3t ./robo3t
+
+3. Verificar que el demonio **mongod** este levantado
+
+4. Iniciar la aplicacion
+
+        $ ./robo3t
+
+5. Crear la conexión local a mongodb
