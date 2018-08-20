@@ -188,3 +188,22 @@ Modificar la accion *MovieShow* para que liste un solo elemento en la base de da
 
 Crear un par de metodos *responseMovie* & *responseMovies* para evitar codear la mismas respuestas mas de una vez
 
+## Actualizar Documento
+
+1. Crear la nueva ruta en el fichero de rutas
+
+        $ Route{"MovieUpdate", "PUT", "/pelicula/{id}", MovieUpdate}
+
+2. Codear la accion *MovieUpdate* en el fichero de acciones
+
+3. Por POSTMAN utilizar la siguiente configuracion
+
+- **Headers**: Content-Type:application/json
+- **Metodo**: PUT
+- **Body**: {
+	"name": "Harry Potter - La camara Secreta",
+	"year": 2012,
+	"director": "J.K. Rowling"
+}
+
+

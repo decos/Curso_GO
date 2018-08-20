@@ -125,3 +125,42 @@ func MovieAdd(w http.ResponseWriter, r *http.Request) {
 
 	responseMovie(w, 200, movie_data)
 }
+
+func MovieUpdate(w http.ResponseWriter, r *http.Request) {
+	params := mux.Vars(r)
+	movie_id := params["id"]
+
+	if !bson.IsObjectIdHex(movie_id) {
+		w.WriteHeader(404)
+		return
+	}
+	oid := bson.ObjectIdHex(movie_id)
+
+	// Recoger el objeto JSON que nos llega por el BODY
+	decoder := json.NewDecoder(r.Body)
+
+	var movie_data Movie
+	// Decodificar los datos y bindearlos en la variable movie_data
+	err := decoder.Decode(&movie_data)
+
+	if err != nil {
+		panic(err)
+		w.WriteHeader(500)
+		return
+	}
+
+	// Cerrar la lectura de algo (body)
+	defer r.Body.Close()
+
+	// Hacer el update en la base de datos
+	document := bson.M{"_id": oid}
+	change := bson.M{"$set": movie_data}
+	err = collection.Update(document, change)
+
+	if err != nil {
+		w.WriteHeader(404)
+		return
+	}
+
+	responseMovie(w, 200, movie_data)
+}
