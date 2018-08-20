@@ -175,3 +175,7 @@ Para hacer la conexión utilizaremos la librería **mgo** (pronunciado como *man
 3. Hacer un POST usando *Postman*
 
 - La base de datos no necesita ser creada, al hacer el POST la crea automaticamente y se crea la coleccion **movies**
+
+## Accion para el listado
+
+Modificar la accion *MovieList* para que consuma la base de datos creada en MongoDB

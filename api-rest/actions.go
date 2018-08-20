@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 
 	"gopkg.in/mgo.v2"
@@ -10,11 +11,13 @@ import (
 	"github.com/gorilla/mux"
 )
 
+/*
 var movies = Movies{
 	Movie{"Sin Limites", 2013, "Desconocido"},
 	Movie{"Batman Begins", 1999, "Scorsese"},
 	Movie{"A todo gas", 2005, "Pizzi"},
 }
+*/
 
 // Crear variable global
 var collection = getSession().DB("curso_go").C("movies")
@@ -40,8 +43,18 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 */
 
 func MovieList(w http.ResponseWriter, r *http.Request) {
+	var results []Movie
+	err := collection.Find(nil).Sort("-_id").All(&results)
 
-	json.NewEncoder(w).Encode(movies)
+	if err != nil {
+		log.Fatal(err)
+	} else {
+		fmt.Println("Resultados: ", results)
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(200)
+	json.NewEncoder(w).Encode(results)
 }
 
 func MovieShow(w http.ResponseWriter, r *http.Request) {
