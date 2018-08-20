@@ -200,10 +200,23 @@ Crear un par de metodos *responseMovie* & *responseMovies* para evitar codear la
 
 - **Headers**: Content-Type:application/json
 - **Metodo**: PUT
+- **Ruta**: http://localhost:8080/pelicula/5b7ac150ab466df8d7ceaf7d
 - **Body**: {
 	"name": "Harry Potter - La camara Secreta",
 	"year": 2012,
 	"director": "J.K. Rowling"
 }
 
+## Eliminar Documentos
 
+1. Crear la nueva ruta en el fichero de rutas
+
+        $ Route{"MovieRemove", "DELETE", "/pelicula/{id}", MovieRemove},
+
+2. Codear la accion *MovieRemove* en el fichero de acciones
+
+3. Por POSTMAN utilizar la siguiente configuracion
+
+- **Headers**: Content-Type:application/json
+- **Metodo**: DELETE
+- **Ruta**: http://localhost:8080/pelicula/5b7ac150ab466df8d7ceaf7d
