@@ -170,6 +170,16 @@ type Message struct {
 	Message string `json:"message"`
 }
 
+// *: Ya no es una copia, es un puntero
+func (this *Message) setStatus(data string) {
+	this.Status = data
+}
+
+// *: Ya no es una copia, es un puntero
+func (this *Message) setMessage(data string) {
+	this.Message = data
+}
+
 func MovieRemove(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	movie_id := params["id"]
@@ -189,7 +199,13 @@ func MovieRemove(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	results := Message{"success", "La pelicula con ID " + movie_id + " ha sido borrada correctamente."}
+	message := new(Message)
+
+	message.setStatus("Success")
+	message.setMessage("La pelicula con ID " + movie_id + " ha sido borrada correctamente")
+
+	results := message
+	//results := Message{"success", "La pelicula con ID " + movie_id + " ha sido borrada correctamente"}
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(200)
 	json.NewEncoder(w).Encode(results)

@@ -220,3 +220,9 @@ Crear un par de metodos *responseMovie* & *responseMovies* para evitar codear la
 - **Headers**: Content-Type:application/json
 - **Metodo**: DELETE
 - **Ruta**: http://localhost:8080/pelicula/5b7ac150ab466df8d7ceaf7d
+
+## Metodos
+
+- GO no es Programación Orientada a Objetos
+- En GO en vez de objetos, tenemos estructuras *structs*
+- Simular una clase
