@@ -184,5 +184,7 @@ Modificar la accion *MovieList* para que liste todos los registros de la base de
 
 Modificar la accion *MovieShow* para que liste un solo elemento en la base de datos creada en MongoDB
 
+## Responses
 
+Crear un par de metodos *responseMovie* & *responseMovies* para evitar codear la mismas respuestas mas de una vez
 
