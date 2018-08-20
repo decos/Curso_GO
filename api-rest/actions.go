@@ -6,6 +6,8 @@ import (
 	"log"
 	"net/http"
 
+	"gopkg.in/mgo.v2/bson"
+
 	"gopkg.in/mgo.v2"
 
 	"github.com/gorilla/mux"
@@ -60,8 +62,27 @@ func MovieList(w http.ResponseWriter, r *http.Request) {
 func MovieShow(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	movie_id := params["id"]
+	//fmt.Println(movie_id)
+	//fmt.Fprintf(w, "Has cargado la pelicula numero %s", movie_id)
+	// Comprobar que el ID es un ID hexadecimal
+	if !bson.IsObjectIdHex(movie_id) {
+		w.WriteHeader(404)
+		return
+	}
 
-	fmt.Fprintf(w, "Has cargado la pelicula numero %s", movie_id)
+	oid := bson.ObjectIdHex(movie_id)
+	//fmt.Println(oid)
+	results := Movie{}
+	err := collection.FindId(oid).One(&results)
+	//fmt.Println(results)
+	if err != nil {
+		w.WriteHeader(404)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(200)
+	json.NewEncoder(w).Encode(results)
 }
 
 // Recibir un reponseWriter y una request

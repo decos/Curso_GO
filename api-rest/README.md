@@ -178,4 +178,11 @@ Para hacer la conexión utilizaremos la librería **mgo** (pronunciado como *man
 
 ## Accion para el listado
 
-Modificar la accion *MovieList* para que consuma la base de datos creada en MongoDB
+Modificar la accion *MovieList* para que liste todos los registros de la base de datos creada en MongoDB
+
+## Un solo elemento
+
+Modificar la accion *MovieShow* para que liste un solo elemento en la base de datos creada en MongoDB
+
+
+
